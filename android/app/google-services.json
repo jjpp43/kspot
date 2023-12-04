@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1037409435001",
+    "project_id": "k-spot-project",
+    "storage_bucket": "k-spot-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1037409435001:android:849afd53fe4f3fb31643a8",
+        "android_client_info": {
+          "package_name": "com.example.kspot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1037409435001-e7vtmjnu2s6002efno2a6c3f1ql7425l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDTrSHqNtnfAjRGtRAGO0nsvyjmbOfY6d8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1037409435001-e7vtmjnu2s6002efno2a6c3f1ql7425l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
