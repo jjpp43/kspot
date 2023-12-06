@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kspot/src/shared/app_colors.dart';
 // Text Styles
 
 // To make it clear which weight we are using, we'll define the weight even for regular
@@ -33,7 +34,24 @@ const TextStyle subheadingStyle = TextStyle(
   fontWeight: FontWeight.w400,
 );
 
+const TextStyle menuHeadingStyle = TextStyle(
+  fontSize: 18,
+  fontWeight: FontWeight.w600,
+);
+
+const TextStyle menuBodyStyle = TextStyle(
+  fontSize: 16,
+  fontWeight: FontWeight.w500,
+);
+
 const TextStyle captionStyle = TextStyle(
   fontSize: 13,
   fontWeight: FontWeight.w400,
+  color: OnSurfaceLightGreyColor,
+);
+
+const TextStyle buttonTextStyle = TextStyle(
+  fontSize: 14,
+  fontWeight: FontWeight.w600,
+  color: PrimaryColor,
 );

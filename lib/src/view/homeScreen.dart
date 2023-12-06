@@ -26,12 +26,12 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Padding(
         padding: const EdgeInsets.symmetric(
           horizontal: 24,
-          vertical: 20,
         ),
         child: SingleChildScrollView(
           controller: _controller,
           child: Column(
             children: [
+              SizedBox(height: 20),
               Stack(
                 children: [
                   Column(
@@ -40,14 +40,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Column(
+                          const Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              const Text(
+                              Text(
                                 'Top Trending',
                                 style: heading2Style,
                               ),
-                              const Text(
+                              Text(
                                 'Top most trending places',
                                 style: bodyStyle,
                               )
@@ -68,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   //여기에 carousel넣기
                   Column(
                     children: [
-                      SizedBox(height: 88),
+                      const SizedBox(height: 88),
                       CarouselSlider(
                         carouselController: _carouselController,
                         options: CarouselOptions(
@@ -87,14 +87,14 @@ class _HomeScreenState extends State<HomeScreen> {
                             builder: (BuildContext context) {
                               return Container(
                                 width: double.infinity,
-                                margin: EdgeInsets.only(right: 0),
+                                margin: const EdgeInsets.only(right: 0),
                                 decoration: BoxDecoration(
                                   color: Colors.amber,
                                   borderRadius: BorderRadius.circular(24),
                                 ),
                                 child: Text(
                                   'text $i',
-                                  style: TextStyle(fontSize: 16.0),
+                                  style: const TextStyle(fontSize: 16.0),
                                 ),
                               );
                             },
@@ -106,11 +106,11 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [1, 2, 3, 4, 5].map((url) {
                           int index = [1, 2, 3, 4, 5].indexOf(url);
                           return AnimatedContainer(
-                            duration: Duration(milliseconds: 200),
+                            duration: const Duration(milliseconds: 200),
                             curve: Curves.easeIn,
                             width: _currentIndex == index ? 24 : 6,
                             height: 6,
-                            margin: EdgeInsets.symmetric(
+                            margin: const EdgeInsets.symmetric(
                                 vertical: 20, horizontal: 8),
                             decoration: BoxDecoration(
                               shape: BoxShape.rectangle,
@@ -126,12 +126,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   )
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 32),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text(
+                  const Text(
                     'K-Drama Popular Spots',
                     style: heading3Style,
                   ),
@@ -141,14 +141,18 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: const EdgeInsets.only(bottom: 2),
                       child: Row(
                         children: [
-                          Text(
+                          const Text(
                             'more',
                             style: captionStyle,
                           ),
                           SvgPicture.asset(
                             'assets/icons/caret-right.svg',
-                            width: 22,
-                            height: 22,
+                            width: 20,
+                            height: 20,
+                            colorFilter: ColorFilter.mode(
+                              OnSurfaceLightGreyColor,
+                              BlendMode.srcIn,
+                            ),
                           ),
                         ],
                       ),
@@ -156,6 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   )
                 ],
               ),
+              SizedBox(height: 8),
               Container(
                 height: 180,
                 child: ListView.builder(
@@ -170,7 +175,127 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 135,
                         height: 180,
                         decoration: BoxDecoration(
-                          image: DecorationImage(
+                          image: const DecorationImage(
+                            fit: BoxFit.contain,
+                            image: AssetImage('assets/images/1.png'),
+                          ),
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+              const SizedBox(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  const Text(
+                    'Movie Spots',
+                    style: heading3Style,
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 2),
+                      child: Row(
+                        children: [
+                          const Text(
+                            'more',
+                            style: captionStyle,
+                          ),
+                          SvgPicture.asset(
+                            'assets/icons/caret-right.svg',
+                            width: 20,
+                            height: 20,
+                            colorFilter: ColorFilter.mode(
+                              OnSurfaceLightGreyColor,
+                              BlendMode.srcIn,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(height: 8),
+              Container(
+                height: 180,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 5, // 아이템의 개수를 설정합니다.
+                  itemBuilder: (BuildContext ctx, int index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(right: 12),
+                      child: Container(
+                        // 'return' 키워드를 사용하여 Container 위젯을 반환합니다.
+                        width: 135,
+                        height: 180,
+                        decoration: BoxDecoration(
+                          image: const DecorationImage(
+                            fit: BoxFit.contain,
+                            image: AssetImage('assets/images/1.png'),
+                          ),
+                          borderRadius: BorderRadius.circular(24),
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+              const SizedBox(height: 40),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  const Text(
+                    'Search by Region',
+                    style: heading3Style,
+                  ),
+                  GestureDetector(
+                    onTap: () {},
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 2),
+                      child: Row(
+                        children: [
+                          const Text(
+                            'more',
+                            style: captionStyle,
+                          ),
+                          SvgPicture.asset(
+                            'assets/icons/caret-right.svg',
+                            width: 20,
+                            height: 20,
+                            colorFilter: ColorFilter.mode(
+                              OnSurfaceLightGreyColor,
+                              BlendMode.srcIn,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(height: 8),
+              Container(
+                height: 180,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 5, // 아이템의 개수를 설정합니다.
+                  itemBuilder: (BuildContext ctx, int index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(right: 12),
+                      child: Container(
+                        // 'return' 키워드를 사용하여 Container 위젯을 반환합니다.
+                        width: 135,
+                        height: 180,
+                        decoration: BoxDecoration(
+                          image: const DecorationImage(
                             fit: BoxFit.contain,
                             image: AssetImage('assets/images/1.png'),
                           ),

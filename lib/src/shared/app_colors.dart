@@ -31,6 +31,7 @@ const Color OnSurfaceVeryLightGreyColor = materialthemerefneutralneutral90;
 const Color LightGreyColor = materialthemerefneutralneutral94;
 const Color MediumGreyColor = materialthemerefneutralneutral60;
 const Color DarkGreyColor = materialthemerefneutralneutral40;
+const Color BackgroundColor = materialthemebackground;
 
 //Error Color
 const Color ErrorColor = materialthemereferrorerror40;
@@ -111,6 +112,7 @@ const Color materialthemerefneutralneutral5 = Color(0xff0e1113);
 const Color materialthemerefneutralneutral25 = Color(0xff393c3d);
 const Color materialthemerefneutralneutral35 = Color(0xff505354);
 const Color materialthemerefneutralneutral98 = Color(0xfff8f9fb);
+const Color materialthemebackground = Color(0xfff4f6f8);
 
 //Error color Tonal Palette
 const Color materialthemereferrorerror10 = Color(0xff410002);

@@ -17,10 +17,13 @@ class ExampleView extends StatelessWidget {
           ...buttonWidgets,
           ...textWidgets,
           ...inputFields,
+          ...tagButton,
         ],
       ),
     );
   }
+
+  List<Widget> get tagButton => [TagButton(title: 'Hashtag')];
 
   List<Widget> get textWidgets => [
         BoxText.headline('Text Styles'),
