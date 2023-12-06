@@ -3,6 +3,7 @@ import '../shared/styles.dart';
 import 'package:flutter/material.dart';
 
 class BoxButton extends StatelessWidget {
+  final bool halfSize;
   final String title;
   final bool disabled;
   final bool busy;
@@ -15,6 +16,7 @@ class BoxButton extends StatelessWidget {
     required this.title,
     this.disabled = false,
     this.busy = false,
+    this.halfSize = false,
     this.onTap,
     this.leading,
   })  : outline = false,
@@ -24,6 +26,7 @@ class BoxButton extends StatelessWidget {
     required this.title,
     this.onTap,
     this.leading,
+    this.halfSize = false,
   })  : disabled = false,
         busy = false,
         outline = true;

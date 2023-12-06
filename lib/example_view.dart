@@ -8,7 +8,7 @@ class ExampleView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 30),
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 30),
         children: [
           BoxText.headingOne('Design System'),
           SizedBox(height: 8),
@@ -48,6 +48,13 @@ class ExampleView extends StatelessWidget {
         SizedBox(height: 8),
         BoxButton(
           title: 'SIGN IN',
+        ),
+        SizedBox(height: 8),
+        BoxText.body('Half'),
+        SizedBox(height: 8),
+        BoxButton(
+          title: 'Half',
+          halfSize: true,
         ),
         SizedBox(height: 8),
         BoxText.body('Disabled'),
